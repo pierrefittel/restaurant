@@ -1,0 +1,23 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Restaurant sample page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrefittel/restaurant.git"
+  },
+  "author": "Landry Pierrefitte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrefittel/restaurant/issues"
+  },
+  "homepage": "https://github.com/pierrefittel/restaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
