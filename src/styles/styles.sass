@@ -42,12 +42,13 @@ body
             .tab
                 color: white
                 text-align: center
-                width: 1fr
-                background-color: $raisin-black
+                aspect-ratio: 1 / 1
+                background-color: rgba($raisin-black, .8)
                 padding: 18px
                 user-select: none
+                border-radius: 50%
                 &:hover
-                    background-color: lighten($raisin-black, 10%)
+                    background-color: lighten(rgba($raisin-black, .8), 10%)
                 &:active
                     background-color: $raisin-black
         .main
