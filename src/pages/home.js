@@ -1,42 +1,34 @@
+import bajiao from "../assets/icons/bajiao.svg";
+import huajiao from "../assets/icons/huajiao.svg";
+import dingxiang from "../assets/icons/dingxiang.svg";
+import newElement from "../functions/newElement";
+
 const home = () => {
 
+    const main = newElement("div", "main", "main");
+
+    const concept = newElement("div", "concept", "tab", "Concept");
+    const menu = newElement("div", "menu", "tab", "Menu");
+    const reservation = newElement("div", "reservation", "tab", "Reservation");
+    
+    const conceptBackground = newElement("img", "concept-background", "tab-background");
+    conceptBackground.src = bajiao;
+
+    const menuBackground = newElement("img", "menu-background", "tab-background");
+    menuBackground.src = huajiao;
+
+    const reservationBackground = newElement("img", "reservation-background", "tab-background");
+    reservationBackground.src = dingxiang;
+
+    concept.appendChild(conceptBackground);
+    menu.appendChild(menuBackground);
+    reservation.appendChild(reservationBackground);
+
+    main.appendChild(concept);
+    main.appendChild(menu);
+    main.appendChild(reservation);
+
     const content = document.getElementById("content");
-
-    const header = document.createElement("div");
-    header.id = "header";
-    header.className = "header";
-
-    const concept = document.createElement("div");
-    concept.id= "concept";
-    concept.className = "tab";
-    concept.innerText = "Concept";
-
-    const menu = document.createElement("div");
-    menu.id= "menu";
-    menu.className = "tab";
-    menu.innerText = "Menu"
-
-    const reservation = document.createElement("div");
-    reservation.id= "reservation";
-    reservation.className = "tab";
-    reservation.innerText = "Reservation";
-
-    const main = document.createElement("div");
-    main.id = "main";
-    main.className = "main";
-
-    const thread = document.createElement("div");
-    thread.id = "thread";
-    thread.className = "thread";
-    thread.innerText = "";
-
-    header.appendChild(concept);
-    header.appendChild(menu);
-    header.appendChild(reservation);
-
-    main.appendChild(thread);
-
-    content.appendChild(header);
     content.appendChild(main);
 
 };
