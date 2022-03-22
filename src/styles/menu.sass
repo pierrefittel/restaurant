@@ -1,5 +1,29 @@
-.container
-    display: "grid"
-    grid-template-columns: "1fr 1fr 1fr"
-    justify-content: center
-    align-content: center
+#menu .container
+    height: 100%
+    width: 100%
+    overflow: scroll
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+    gap: 12px
+    &::-webkit-scrollbar
+        display: none
+    .menu-item
+        display: flex
+        flex-direction: column
+        border: solid 2px white
+        font-size: .7em
+        letter-spacing: 0
+        pointer-events: none
+        padding: 18px
+        text-align: left
+        z-index: 1
+        .menu-image
+            object-fit: cover
+            border-radius: 50%
+            pointer-events: none
+        .menu-title
+            font-weight: bold
+        .menu-description
+            font-weight: normal
+        .menu-price
+            font-size: 1.2em

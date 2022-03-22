@@ -9,6 +9,6 @@ head();
 home();
 
 //Adding event listener on tabs
-addEvent(concept);
-addEvent(menu);
-addEvent(reservation);
+addEvent.addExpand(concept);
+addEvent.addExpand(menu);
+addEvent.addExpand(reservation);

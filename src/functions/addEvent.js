@@ -1,9 +1,15 @@
-import expandElement from "./expandElement";
+import toggleTab from "./toggleTab";
 
-const addEvent = (element, action) => {
-    element.addEventListener("click", function () {
-        expandElement();
-    });
+const addExpand = (element) => {
+    element.addEventListener("click", toggleTab.expandElement);
 };
 
-export default addEvent;
+const addClose = (element) => {
+    element.addEventListener("click", toggleTab.closeElement);
+};
+
+const remove = (element) => {
+    element.removeEventListener("click", toggleTab.expandElement);
+};
+
+export default { addExpand, addClose, remove };

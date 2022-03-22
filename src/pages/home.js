@@ -1,7 +1,6 @@
 import bajiao from "../assets/icons/bajiao.svg";
 import huajiao from "../assets/icons/huajiao.svg";
 import dingxiang from "../assets/icons/dingxiang.svg";
-import background from "../assets/images/johanneke-kroesbergen-kamps-odEUcnnqCHo-unsplash.jpg";
 import newElement from "../functions/newElement";
 
 const home = () => {
@@ -13,16 +12,24 @@ const home = () => {
 
     const tabGrid = newElement("div", "tab-grid", "tab-grid");
 
-    const concept = newElement("div", "concept", "tab", "Concept");
-    const menu = newElement("div", "menu", "tab", "Menu");
-    const reservation = newElement("div", "reservation", "tab", "Reservation");
+    const concept = newElement("div", "concept", "tab");
+    const menu = newElement("div", "menu", "tab");
+    const reservation = newElement("div", "reservation", "tab");
     
+    const conceptTitle = newElement("div", "concept-title", "title", "Concept");
+    const menuTitle = newElement("div", "menu-title", "title", "Menu");
+    const reservationTitle = newElement("div", "reservation-title", "title", "Reservation");
+
     const conceptBackground = newElement("img", "concept-background", "tab-background");
     conceptBackground.src = bajiao;
     const menuBackground = newElement("img", "menu-background", "tab-background");
     menuBackground.src = huajiao;
     const reservationBackground = newElement("img", "reservation-background", "tab-background");
     reservationBackground.src = dingxiang;
+
+    concept.appendChild(conceptTitle);
+    menu.appendChild(menuTitle);
+    reservation.appendChild(reservationTitle);
 
     concept.appendChild(conceptBackground);
     menu.appendChild(menuBackground);
@@ -45,7 +52,7 @@ const home = () => {
         i.style.width = "250px";
         i.style.height = "250px";
         i.style.borderRadius = "50%";
-        i.children[0].style.filter = "opacity(80%)";
+        i.children[1].style.filter = "opacity(80%)";
     }
 
 };

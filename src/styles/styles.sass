@@ -69,6 +69,8 @@ body
                     transition-duration: .5s
                     gap: 5%
                     box-shadow: 2px 2px 5px $blackchocolate
+                    .title
+                        pointer-events: none
                     img
                         align-self: center
                         width:80%
@@ -79,15 +81,11 @@ body
                         background-color: $indian-yellow
                     &:active
                         background-color: lighten(rgba($indian-yellow, .8), 10%)
-                .tab-expand
-                    display: flex
-                    border-radius: 0%
-                    width: 50vw
-                    height: 80vh
-                    img
-                        opacity: 0%
-                .tab-hide
-                    width: 0px
-                    height: 0px
-                    z-index: 0
-                    opacity: 0%
+                .close
+                    text-align: right
+                    animation-duration: .5s
+                    &:hover
+                        color: darken($indian-yellow, 20%)
+                    &:active
+                        color: white
+                        

@@ -1,0 +1,31 @@
+$indian-yellow: rgba(224, 159, 62, 1)
+
+#reservation .container
+    height: 100%
+    width: 100%
+    overflow: scroll
+    display: flex
+    flex-direction: column
+    text-align: left
+    padding: 36px
+    gap: 28px
+    &::-webkit-scrollbar
+        display: none
+    .input
+        height: 30px
+        border-radius: 16px
+        border: solid 1px gray
+        outline: none
+        text-indent: .8em
+        letter-spacing: .8em
+    #submit
+        height: 30px
+        border: none
+        border-radius: 16px
+        width: 150px
+        margin-top: 50px
+        background-color: white
+        &:hover
+            background-color: lighten($indian-yellow, 20%)
+        &:active
+            background-color: lighten($indian-yellow, 10%)
