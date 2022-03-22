@@ -1,15 +1,13 @@
 @use 'reset'
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap')
 
-$font-stack: 'Inconsolata', monospace
+$font-stack: 'Open Sans', sans-serif
     
 /* SCSS RGB */
 
-$deep-space-sparkle: rgba(51, 92, 103, 1)
-$medium-champagne: rgba(255, 243, 176, 1)
 $indian-yellow: rgba(224, 159, 62, 1)
-$auburn: rgba(158, 42, 43, 1)
 $rosewood: rgba(84, 11, 14, 1)
+$blackchocolate: rgba(37, 27, 23, 1)
 
 *
     margin: 0
@@ -21,6 +19,7 @@ html
 
 body
     font-family: $font-stack
+    letter-spacing: .1em
     min-height: 100vh
     margin: 0
     display: flex
@@ -29,48 +28,66 @@ body
     .content
         display: flex
         flex-direction: column
-        width: 100%
         .main
-            height: 100%
-            background: $rosewood
+            background-image: url('../assets/images/johanneke-kroesbergen-kamps-odEUcnnqCHo-unsplash.jpg')
+            background-repeat: no-repeat
+            background-attachment: fixed
+            background-size: cover
+            height: 100vh
+            width: 100vw
             display: grid
-            grid-template-columns: 1fr 1fr 1fr
-            justify-items: center
-            align-items: center
-            gap: 18px
-            padding-right: 20%
-            padding-left: 20%
-            .tab
-                font-size: 1.2em
-                font-weight: bold
-                background-color: lighten(rgba($indian-yellow, .8), 20%)
+            grid-template-row: 30% 70%
+            .header
                 display: flex
                 justify-content: center
-                align-content: center
-                flex-direction: column
-                border-radius: 50%
-                color: $rosewood
-                text-align: center
-                height: 250px
-                width: 250px
-                padding: 18px
+                align-items: center
                 user-select: none
-                transition-duration: .5s
-                gap: 5%
-                img
-                    align-self: center
-                    filter: opacity(80%)
-                    max-width:80%
-                    max-height:80%
-                    pointer-events: none
-                &:hover
-                    background-color: $indian-yellow
-                &:active
-                    background-color: lighten(rgba($indian-yellow, .8), 10%)
-            .tab-expand
-                display: flex
-                border-radius: 0%
-                width: 100%
-                height: 100%
-            .tab-hide
-                display: none
+                font-size: 6em
+                color: white
+                letter-spacing: 1em
+                text-indent: 1em
+            .tab-grid
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                justify-items: center
+                gap: 26px
+                padding-right: 20%
+                padding-left: 20%
+                .tab
+                    border: solid 2px white
+                    font-size: 1.2em
+                    font-weight: bold
+                    background-color: lighten(rgba($indian-yellow, .5), 20%)
+                    display: flex
+                    justify-content: center
+                    align-content: center
+                    flex-direction: column
+                    color: white
+                    text-align: center
+                    padding: 18px
+                    user-select: none
+                    transition-duration: .5s
+                    gap: 5%
+                    box-shadow: 2px 2px 5px $blackchocolate
+                    img
+                        align-self: center
+                        width:80%
+                        height:80%
+                        pointer-events: none
+                        transition-duration: .5s
+                    &:hover
+                        background-color: $indian-yellow
+                    &:active
+                        background-color: lighten(rgba($indian-yellow, .8), 10%)
+                .tab-expand
+                    display: flex
+                    border-radius: 0%
+                    width: 50vw
+                    height: 80vh
+                    img
+                        opacity: 0%
+                .tab-hide
+                    width: 0px
+                    height: 0px
+                    z-index: 0
+                    opacity: 0%
